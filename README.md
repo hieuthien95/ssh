@@ -173,3 +173,8 @@ Successfully tagged golang_health_image:latest
 ```
 /etc/nginx/nginx.conf
 ```
+
+# remote ssh
+```
+ssh -i deployment_key.txt demo@192.237.248.66
+```

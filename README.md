@@ -60,6 +60,7 @@ Connection to 35.247.146.103 closed.
 hieut@DESKTOP-M6CBJL7 MINGW64 ~
 $ ssh hieut@35.247.146.103
 Last login: Thu Mar 28 08:01:32 2019 from 14.161.15.48
+
 [hieut@instance-1 ~]$ ssh-keygen
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/hieut/.ssh/id_rsa):

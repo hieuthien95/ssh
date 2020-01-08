@@ -179,3 +179,7 @@ Successfully tagged golang_health_image:latest
 ```
 ssh -i deployment_key.txt demo@192.237.248.66
 ```
+
+======================================================================
+location public key: /Users/thienbui/.ssh
+new ssh key git: https://github.com/settings/ssh/new

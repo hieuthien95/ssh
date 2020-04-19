@@ -3,11 +3,19 @@
 ```
 sudo su root
 ```
-## apt-get
+
 ```
-curl https://raw.githubusercontent.com/dvershinin/apt-get-centos/master/apt-get.sh -
-o /usr/local/bin/apt-get
-chmod 0755 /usr/local/bin/apt-get
+nano /etc/ssh/sshd_config
+systemctl enable sshd.service
+systemctl restart sshd.service
+
+sudo passwd
+```
+
+## yum
+```
+yum install <sth>
+yum remove <sth>
 ```
 
 ## nano

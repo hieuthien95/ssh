@@ -1,7 +1,7 @@
 # begin
-## sudo
+## root
 ```
-sudo yum update -y
+sudo su root
 ```
 ## apt-get
 ```

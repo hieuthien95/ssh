@@ -1,5 +1,6 @@
 # begin
 ## root
+*https://www.youtube.com/watch?v=e37WuORB0UQ*
 ```
 sudo su root
 ```
@@ -21,6 +22,16 @@ yum remove <sth>
 ## nano
 ```
 apt-get install nano
+```
+
+## nginx
+*https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-centos-7*
+```
+yum install epel-release
+yum install nginx
+
+systemctl start nginx
+sudo systemctl enable nginx
 ```
 
 *Create image and run container*

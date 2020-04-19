@@ -1,3 +1,20 @@
+* begin *
+# sudo
+```
+sudo yum update -y
+```
+# apt-get
+```
+curl https://raw.githubusercontent.com/dvershinin/apt-get-centos/master/apt-get.sh -
+o /usr/local/bin/apt-get
+chmod 0755 /usr/local/bin/apt-get
+```
+
+# nano
+```
+sudo apt-get install nano
+```
+
 *Create image and run container*
 ```
 $ docker build -t golang_health_image .

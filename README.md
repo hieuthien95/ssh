@@ -1,4 +1,4 @@
-* begin *
+*begin*
 # sudo
 ```
 sudo yum update -y

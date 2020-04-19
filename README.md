@@ -1,16 +1,16 @@
-*begin*
-# sudo
+# begin
+## sudo
 ```
 sudo yum update -y
 ```
-# apt-get
+## apt-get
 ```
 curl https://raw.githubusercontent.com/dvershinin/apt-get-centos/master/apt-get.sh -
 o /usr/local/bin/apt-get
 chmod 0755 /usr/local/bin/apt-get
 ```
 
-# nano
+## nano
 ```
 sudo apt-get install nano
 ```

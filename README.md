@@ -12,7 +12,7 @@ chmod 0755 /usr/local/bin/apt-get
 
 ## nano
 ```
-sudo apt-get install nano
+apt-get install nano
 ```
 
 *Create image and run container*

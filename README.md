@@ -34,12 +34,28 @@ systemctl start nginx
 sudo systemctl enable nginx
 ```
 
+# docker
+## install
+*https://docs.docker.com/engine/install/centos/*
+## remove
+*https://www.learn-it-with-examples.com/development/odev-tutorials/docker/uninstallation-docker-from-linux.html*
+```
+docker run hello-world
+yum remove docker-ce
+rm -rf /var/lib/docker
+```
+
+# bash
+```
+rm -rf // rm folder
+```
+
+
 *Create image and run container*
 ```
 $ docker build -t golang_health_image .
 $ docker run -d --name golang_health_container -p 9092:9092 golang_health_image
 ```
-
 # SSH
 
 ```

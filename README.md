@@ -62,11 +62,6 @@ $ docker run -d --name golang_health_container -p 9092:9092 golang_health_image
 
 # SSH
 
-## copy ssh key
-```
-ssh-copy-id root@103.130.219.127
-```
-
 ## gen ssh key
 ```
 hieut@DESKTOP-M6CBJL7 MINGW64 ~
@@ -101,7 +96,12 @@ The key's randomart image is:
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDuvVmO9M1b+ttHo56dAyimEJ0a25d6hZTvTCDRYrk9lUF3R7VgClBXkUeg0Oo58DyqsQ+slMW1otFuSxzxBGr8jCF2WNswq4UbHfYonQsfKR1XuXrTxCuzTkeAQ+hSKP6Ht3U5ssHZTBYu3zp3NOntGzzkJBrr3z+DKji1+oLsORtIEDmAnWJ7YEE4Vp2IYJRMZ+2aEBBn/VJQBs053hYJ6kJcc0posHmXDGZ4t9MLthTailmeRtljzlkIVvRVNjXGbZkmIafNCWYkVKY6fGSDmriwPaEwgleqLp6NUrK8ewvnLhXHnPu8B/IL+Qs2NMfwzIGo1U6xTC4CM6DC+XFF hieut@instance-1
 ```
 
-# remote ssh
+## copy ssh key
+```
+ssh-copy-id root@103.130.219.127
+```
+
+## remote ssh by ssh_key
 ```
 ssh -i deployment_key.txt demo@192.237.248.66
 ```

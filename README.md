@@ -63,6 +63,8 @@ $ docker run -d --name golang_health_container -p 9092:9092 golang_health_image
 ssh-copy-id root@103.130.219.127
 ```
 
+## gen ssh key
+
 ```
 hieut@DESKTOP-M6CBJL7 MINGW64 ~
 $ ssh hieut@35.247.146.103

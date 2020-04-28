@@ -1,4 +1,5 @@
 # begin
+
 ## root
 *https://www.youtube.com/watch?v=e37WuORB0UQ*
 ```
@@ -35,8 +36,10 @@ sudo systemctl enable nginx
 ```
 
 # docker
+
 ## install
 *https://docs.docker.com/engine/install/centos/*
+
 ## remove
 *https://www.learn-it-with-examples.com/development/odev-tutorials/docker/uninstallation-docker-from-linux.html*
 ```
@@ -56,6 +59,7 @@ rm -rf // rm folder
 $ docker build -t golang_health_image .
 $ docker run -d --name golang_health_container -p 9092:9092 golang_health_image
 ```
+
 # SSH
 
 ## copy ssh key
@@ -64,57 +68,6 @@ ssh-copy-id root@103.130.219.127
 ```
 
 ## gen ssh key
-
-```
-hieut@DESKTOP-M6CBJL7 MINGW64 ~
-$ ssh hieut@35.247.146.103
-Last login: Thu Mar 28 01:39:55 2019 from 14.161.15.48
-```
-
-```
-[hieut@instance-1 ~]$ ifconfig
-docker0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 172.17.0.1  netmask 255.255.0.0  broadcast 0.0.0.0
-        inet6 fe80::42:42ff:fe96:9739  prefixlen 64  scopeid 0x20<link>
-        ether 02:42:42:96:97:39  txqueuelen 0  (Ethernet)
-        RX packets 380  bytes 30989 (30.2 KiB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 389  bytes 44512 (43.4 KiB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1460
-        inet 10.148.0.2  netmask 255.255.255.255  broadcast 10.148.0.2
-        inet6 fe80::4001:aff:fe94:2  prefixlen 64  scopeid 0x20<link>
-        ether 42:01:0a:94:00:02  txqueuelen 1000  (Ethernet)
-        RX packets 129807  bytes 1173264897 (1.0 GiB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 99983  bytes 9387467 (8.9 MiB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
-        inet 127.0.0.1  netmask 255.0.0.0
-        inet6 ::1  prefixlen 128  scopeid 0x10<host>
-        loop  txqueuelen 1000  (Local Loopback)
-        RX packets 634  bytes 63325 (61.8 KiB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 634  bytes 63325 (61.8 KiB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-vethaa2979c: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet6 fe80::cc82:1cff:fef5:cd24  prefixlen 64  scopeid 0x20<link>
-        ether ce:82:1c:f5:cd:24  txqueuelen 0  (Ethernet)
-        RX packets 89  bytes 7909 (7.7 KiB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 97  bytes 11132 (10.8 KiB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-```
-
-```
-[hieut@instance-1 ~]$ exit
-logout
-Connection to 35.247.146.103 closed.
-```
-
 ```
 hieut@DESKTOP-M6CBJL7 MINGW64 ~
 $ ssh hieut@35.247.146.103
@@ -148,6 +101,12 @@ The key's randomart image is:
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDuvVmO9M1b+ttHo56dAyimEJ0a25d6hZTvTCDRYrk9lUF3R7VgClBXkUeg0Oo58DyqsQ+slMW1otFuSxzxBGr8jCF2WNswq4UbHfYonQsfKR1XuXrTxCuzTkeAQ+hSKP6Ht3U5ssHZTBYu3zp3NOntGzzkJBrr3z+DKji1+oLsORtIEDmAnWJ7YEE4Vp2IYJRMZ+2aEBBn/VJQBs053hYJ6kJcc0posHmXDGZ4t9MLthTailmeRtljzlkIVvRVNjXGbZkmIafNCWYkVKY6fGSDmriwPaEwgleqLp6NUrK8ewvnLhXHnPu8B/IL+Qs2NMfwzIGo1U6xTC4CM6DC+XFF hieut@instance-1
 ```
 
+# remote ssh
+```
+ssh -i deployment_key.txt demo@192.237.248.66
+```
+
+## build go project
 ```
 [hieut@instance-1 ~]$ ls
 
@@ -232,11 +191,6 @@ Successfully tagged golang_health_image:latest
 
 ```
 /etc/nginx/nginx.conf
-```
-
-# remote ssh
-```
-ssh -i deployment_key.txt demo@192.237.248.66
 ```
 
 ======================================================================

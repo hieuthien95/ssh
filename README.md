@@ -1,11 +1,9 @@
 # begin
-
-## root
+### root
 *https://www.youtube.com/watch?v=e37WuORB0UQ*
 ```
 sudo su root
 ```
-
 ```
 nano /etc/ssh/sshd_config
 systemctl enable sshd.service
@@ -14,44 +12,19 @@ systemctl restart sshd.service
 sudo passwd
 ```
 
-## yum
+# bash
+### install everything by yum
 ```
 yum install <sth>
 yum remove <sth>
 ```
 
-## nano
-```
-apt-get install nano
-```
-
-## nginx
-*https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-centos-7*
-```
-yum install epel-release
-yum install nginx
-
-systemctl start nginx
-sudo systemctl enable nginx
-```
-
-# docker
-
-## install
-*https://docs.docker.com/engine/install/centos/*
-
-## remove
-*https://www.learn-it-with-examples.com/development/odev-tutorials/docker/uninstallation-docker-from-linux.html*
-```
-docker run hello-world
-yum remove docker-ce
-rm -rf /var/lib/docker
-```
-
-# bash
+### remove folder
 ```
 rm -rf // rm folder
 ```
+
+### check PID
 ```
 $ ps ax | grep firefox
 2222 ?        S      0:00 /bin/sh /usr/lib/firefox-3.6.9/firefox
@@ -61,6 +34,55 @@ $ ps ax | grep firefox
 $ kill 2222
 ```
 
+### run sh file
+```
+chmod +x install_golang.sh
+./install_golang.sh
+```
+
+### run file in backgound
+```
+nohup go run main.go
+```
+
+# fix permition ssh
+```
+[hieut@instance-1 thienbh-lession2]$ sudo usermod -aG docker hieut
+
+[hieut@instance-1 thienbh-lession2]$ sudo usermod -aG root hieut
+
+[hieut@instance-1 thienbh-lession2]$ sudo chmod 777 /var/run/docker.sock
+```
+
+# nginx
+*https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-centos-7*
+```
+yum install epel-release
+yum install nginx
+
+systemctl start nginx
+sudo systemctl enable nginx
+```
+```
+sudo nginx -s stop
+```
+
+* location nginx file *
+```
+/etc/nginx/nginx.conf
+```
+
+# docker
+### install
+*https://docs.docker.com/engine/install/centos/*
+
+### remove
+*https://www.learn-it-with-examples.com/development/odev-tutorials/docker/uninstallation-docker-from-linux.html*
+```
+docker run hello-world
+yum remove docker-ce
+rm -rf /var/lib/docker
+```
 
 *Create image and run container*
 ```
@@ -69,8 +91,7 @@ $ docker run -d --name golang_health_container -p 9092:9092 golang_health_image
 ```
 
 # SSH
-
-## gen ssh key
+### gen ssh key
 ```
 hieut@DESKTOP-M6CBJL7 MINGW64 ~
 $ ssh hieut@35.247.146.103
@@ -104,17 +125,17 @@ The key's randomart image is:
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDuvVmO9M1b+ttHo56dAyimEJ0a25d6hZTvTCDRYrk9lUF3R7VgClBXkUeg0Oo58DyqsQ+slMW1otFuSxzxBGr8jCF2WNswq4UbHfYonQsfKR1XuXrTxCuzTkeAQ+hSKP6Ht3U5ssHZTBYu3zp3NOntGzzkJBrr3z+DKji1+oLsORtIEDmAnWJ7YEE4Vp2IYJRMZ+2aEBBn/VJQBs053hYJ6kJcc0posHmXDGZ4t9MLthTailmeRtljzlkIVvRVNjXGbZkmIafNCWYkVKY6fGSDmriwPaEwgleqLp6NUrK8ewvnLhXHnPu8B/IL+Qs2NMfwzIGo1U6xTC4CM6DC+XFF hieut@instance-1
 ```
 
-## copy ssh key
+### copy ssh key
 ```
 ssh-copy-id root@103.130.219.127
 ```
 
-## remote ssh by ssh_key
+### remote ssh by ssh_key
 ```
 ssh -i deployment_key.txt demo@192.237.248.66
 ```
 
-## build go project
+### build go project
 ```
 [hieut@instance-1 ~]$ ls
 
@@ -186,19 +207,6 @@ Successfully tagged golang_health_image:latest
 ```
 [hieut@instance-1 thienbh-lession2]$ curl "localhost:9092/healthcheck"
 {"Status":"OK","StatusCode":200,"Msg":"BHT Service Runing"}
-```
-
-# fix permition ssh
-```
-[hieut@instance-1 thienbh-lession2]$ sudo usermod -aG docker hieut
-
-[hieut@instance-1 thienbh-lession2]$ sudo usermod -aG root hieut
-
-[hieut@instance-1 thienbh-lession2]$ sudo chmod 777 /var/run/docker.sock
-```
-
-```
-/etc/nginx/nginx.conf
 ```
 
 ======================================================================

@@ -19,4 +19,10 @@ Sau đó bấm Ctrl+O và Enter sau đó bấm Ctrl+X để thoát
 > systemctl enable sshd.service
 > systemctl restart sshd.service
 > sudo passwd
+vd: Abc123456
+```
+
+# step 2: có thể login bằng ssh CMD
+```
+> ssh root@x.x.x.x
 ```

@@ -23,6 +23,17 @@ vd: Abc123456
 ```
 
 # step 2: có thể login bằng ssh CMD
+## truy cập
 ```
 > ssh root@x.x.x.x
+```
+## cài git
+```
+yum install git -y
+git --version
+```
+## cài golang
+```
+chmod +x install_golang.sh
+./install_golang.sh
 ```

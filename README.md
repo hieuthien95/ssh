@@ -52,6 +52,14 @@ rm -rf /var/lib/docker
 ```
 rm -rf // rm folder
 ```
+```
+$ ps ax | grep firefox
+2222 ?        S      0:00 /bin/sh /usr/lib/firefox-3.6.9/firefox
+2231 ?        Sl   514:36 /usr/lib/firefox-3.6.9/firefox-bin
+30290 pts/2    S+     0:00 grep --color
+
+$ kill 2222
+```
 
 
 *Create image and run container*

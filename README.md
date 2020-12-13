@@ -212,3 +212,7 @@ Successfully tagged golang_health_image:latest
 ======================================================================
 location public key: /Users/thienbui/.ssh
 new ssh key git: https://github.com/settings/ssh/new
+
+# copy ssh <-> local
+down: ```scp -r ./power3 root@103.130.219.127:/home/seal/public_html/power3```
+up: ```scp -r ./power3 root@103.130.219.127:/home/seal/public_html/```

@@ -217,3 +217,11 @@ new ssh key git: https://github.com/settings/ssh/new
 down: ```scp -r root@103.130.219.127:/home/seal/public_html/power3 ./```
 
 up: ```scp -r ./power3 root@103.130.219.127:/home/seal/public_html/```
+
+
+======================================================================
+# Message/email queue
+```
+exim -bp
+exim -Mvh 1nFYdp-0004dn-HN
+```

@@ -228,3 +228,9 @@ up: ```scp -r ./power3 root@103.130.219.127:/home/seal/public_html/```
 exim -bp
 exim -Mvh 1nFYdp-0004dn-HN
 ```
+
+=====
+# nohup file go build
+```
+sudo nohup ./order-v2
+```

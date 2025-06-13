@@ -234,3 +234,8 @@ exim -Mvh 1nFYdp-0004dn-HN
 ```
 sudo nohup ./order-v2
 ```
+
+======================================================================
+
+# gen hex from pem
+`xxd -plain private_key_pkcs8.pem > private_key_pkcs8.hex`

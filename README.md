@@ -93,6 +93,9 @@ $ docker run -d --name golang_health_container -p 9092:9092 golang_health_image
 # SSH
 ### gen ssh key
 ```
+// ssh-keygen -t ed25519 -C "<comment>"
+// cat ~/.ssh/id_ed25519
+
 hieut@DESKTOP-M6CBJL7 MINGW64 ~
 $ ssh hieut@35.247.146.103
 Last login: Thu Mar 28 08:01:32 2019 from 14.161.15.48

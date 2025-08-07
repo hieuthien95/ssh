@@ -242,3 +242,6 @@ sudo nohup ./order-v2
 
 # gen hex from pem
 `xxd -plain private_key_pkcs8.pem > private_key_pkcs8.hex`
+
+# remove mac attribute
+`xattr -cr "/Applications/My app.app"`

@@ -245,3 +245,7 @@ sudo nohup ./order-v2
 
 # remove mac attribute
 `xattr -cr "/Applications/My app.app"`
+
+======================================================================
+
+`ssh-copy-id root@100.x.x.x`
